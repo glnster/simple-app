@@ -6,8 +6,8 @@ module('Acceptance | index', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /index', async function (assert) {
-    await visit('/index');
+    await visit('/');
 
-    assert.equal(currentURL(), '/index');
+    assert.equal(currentURL(), '/');
   });
 });
