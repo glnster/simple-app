@@ -1,0 +1,8 @@
+{
+  "plugins": ["babel-plugin-ember-test-metadata"],
+  "ignore": [
+    "tests/helpers",
+    "tests/*.html",
+    "tests/*.js"
+  ]
+}
