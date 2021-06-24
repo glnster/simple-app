@@ -24,7 +24,7 @@
     "babel:test-metadata": "npm-run-all babel:transform babel:cp test:a11y",
     "babel:transform": "babel tests/ -d output/",
     "babel:cp": "cp -Rp output/* tests/",
-    "test:a11y": "ember test --query=enableA11yAudit"
+    "test:a11y": "ember test --query=enableA11yAudit && grep -l 'filePath' ember-a11y-report/*.json"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
