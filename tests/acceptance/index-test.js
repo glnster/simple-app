@@ -23,25 +23,19 @@ module('Acceptance | index', function (hooks) {
 module('Acceptance | search', function (hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /index', async function (assert) {
+  test('visiting /search', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
   });
 });
 
-module('Unit | foo', function () {
-  test('foo', async function (assert) {
-    assert.equal('bar', 'bar');
-  });
-});
-
-module('Acceptance | index', function (hooks) {
+module('Acceptance | about', function (hooks) {
   setupApplicationTest(hooks);
 
   hooks.beforeEach(beforeEachSetup);
 
-  test('visiting /index', async function (assert) {
+  test('visiting /about', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
