@@ -2,10 +2,6 @@ import { module, test } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
-function beforeEachSetup() {
-  //mock
-}
-
 module('Acceptance | index', function (hooks) {
   setupApplicationTest(hooks);
 
@@ -13,7 +9,7 @@ module('Acceptance | index', function (hooks) {
     //noop
   });
 
-  test('visiting /index', async function (assert) {
+  test('bpetm should insert test metadata statements to existing beforeEach', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
@@ -23,7 +19,7 @@ module('Acceptance | index', function (hooks) {
 module('Acceptance | search', function (hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /search', async function (assert) {
+  test('bpetm should create and insert a new beforeEach after any setup(hooks) calls', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
@@ -33,9 +29,7 @@ module('Acceptance | search', function (hooks) {
 module('Acceptance | about', function (hooks) {
   setupApplicationTest(hooks);
 
-  hooks.beforeEach(beforeEachSetup);
-
-  test('visiting /about', async function (assert) {
+  test('bpetm should correctly transpile each of these sibling modules', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');

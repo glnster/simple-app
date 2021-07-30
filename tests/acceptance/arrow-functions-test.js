@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
-module('Acceptance | index', (hooks) => {
+module('Acceptance | arrow functions', (hooks) => {
   // test arrow function, context
   setupApplicationTest(hooks);
 
@@ -10,7 +10,7 @@ module('Acceptance | index', (hooks) => {
     //noop
   });
 
-  test('visiting /index', async function (assert) {
+  test('when arrow functions are passed into module or beforeEach, the context passed into getTestMetadata is correct', async function (assert) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
