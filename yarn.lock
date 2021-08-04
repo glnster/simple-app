@@ -2601,10 +2601,10 @@ babel-plugin-ember-modules-api-polyfill@^3.5.0:
   dependencies:
     ember-rfc176-data "^0.3.17"
 
-babel-plugin-ember-test-metadata@1.0.0-beta.7:
-  version "1.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-ember-test-metadata/-/babel-plugin-ember-test-metadata-1.0.0-beta.7.tgz#129c81263dff453423c9fd7521657e26622fb8e3"
-  integrity sha512-26rj+TBGLtT+z+G3JU1O/KIwVf4mAf7gMc9UtRrmRX69k1AGQmr4WKpDLdEFvl0NgcpwFJHjS0/EN5YJBgoVYQ==
+babel-plugin-ember-test-metadata@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ember-test-metadata/-/babel-plugin-ember-test-metadata-1.1.0.tgz#131e62ed0bdd2bd8fbad74d5b12427979d9874e7"
+  integrity sha512-s95IMmJxpsa8/HdEewL6LFC/vfc8Eg7cfZgsksp1K+Ac1qY5ofkhp9LnaWkdfrAExpH5VtNze/cOyO5DXIAZ0A==
 
 babel-plugin-filter-imports@^4.0.0:
   version "4.0.0"

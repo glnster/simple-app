@@ -24,7 +24,7 @@
     "babel:test-metadata": "npm-run-all babel:transform babel:cp test:a11y",
     "babel:transform": "babel tests/ -d output/",
     "babel:cp": "cp -Rp output/* tests/",
-    "test:a11y": "ember test --query=enableA11yAudit && grep -l 'filePath' ember-a11y-report/*.json"
+    "test:a11y": "BABEL_TEST_METADATA=true ember test --query=enableA11yAudit && grep -l 'filePath' ember-a11y-report/*.json"
   },
   "resolutions": {
     "@babel/runtime": "7.12.5"
@@ -37,7 +37,7 @@
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-ember-test-metadata": "1.0.0-beta.7",
+    "babel-plugin-ember-test-metadata": "1.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-a11y-testing": "^4.0.8",
     "ember-auto-import": "^1.11.2",
