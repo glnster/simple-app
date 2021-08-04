@@ -11,8 +11,8 @@ import { setup } from 'qunit-dom';
 import { start } from 'ember-qunit';
 
 setApplication(Application.create(config.APP));
-setupGlobalA11yHooks(() => true);
 setupMiddlewareReporter();
+setupGlobalA11yHooks(() => true);
 setup(QUnit.assert);
 
 start();
