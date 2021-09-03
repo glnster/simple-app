@@ -1,17 +1,11 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const buildBabelOptions = require('./build-babel-options');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    babel: {
-      plugins: [
-        [
-          require.resolve('babel-plugin-ember-test-metadata'),
-          { enabled: !!process.env.BABEL_TEST_METADATA },
-        ],
-      ],
-    },
+    babel: buildBabelOptions(),
   });
 
   // Use `app.import` to add additional libraries to the generated
