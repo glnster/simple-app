@@ -2,10 +2,33 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const buildBabelOptions = require('./build-babel-options');
+// const { getProjectPathInfo } = require('babel-plugin-ember-test-metadata');
+
+function getProjectPathInfo(project) {
+  const parsedProjectInfo = {};
+
+  if (project) {
+    parsedProjectInfo.pkg = {
+      name: project.pkg.name,
+      'ember-addon': {
+        paths: project.pkg['ember-addon'].paths,
+      },
+      // more props that might be needed in correcting the file path
+    };
+  }
+
+  return parsedProjectInfo;
+}
 
 module.exports = function (defaults) {
+  // console.log('defaults: ', defaults);
+
+  // A util in BPETM that returns select project info, project name,
+  // engine/addon info, paths
+  const projectPathInfo = getProjectPathInfo(defaults.project);
+
   let app = new EmberApp(defaults, {
-    babel: buildBabelOptions(),
+    babel: buildBabelOptions(projectPathInfo),
   });
 
   // Use `app.import` to add additional libraries to the generated
